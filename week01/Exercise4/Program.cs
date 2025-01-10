@@ -19,10 +19,17 @@ class Program
             Console.Write("Enter number: ");
             string answer = Console.ReadLine();
             number = int.Parse(answer);
-            listOfNumbers.Add(number);
 
+            //Add the numbers to the list, except 0
+            if (number != 0) 
+            {
+                listOfNumbers.Add(number);
+            }
+            
+            //Find the total of the numbers in the list
             sum = sum + number;
 
+            //Find the largest number 
             if (number > largest)
             {
                 largest = number;
@@ -30,13 +37,14 @@ class Program
 
         } while (number != 0);
 
-        int listLenght = listOfNumbers.Count - 1;
+        //Change the type to float so it can calculate the average
+        int listLenght = listOfNumbers.Count;
         float lenght = (float)listLenght;
         float total = (float)sum;
 
         float average = total / lenght;
 
-
+        //Show the results
         Console.WriteLine($"The sum is: {sum}");
         Console.WriteLine($"The average is: {average}");
         Console.WriteLine($"The largest number is: {largest}");
