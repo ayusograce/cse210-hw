@@ -32,6 +32,9 @@ class Program
                 DateTime theCurrentTime = DateTime.Now;
                 anEntry._date = theCurrentTime.ToShortDateString();
 
+                Console.Write("From 1 to 10 how would you rate this day?: ");
+                anEntry._rate = Console.ReadLine();
+
                 PromptGenerator prompt = new PromptGenerator();
                 anEntry._promptText = prompt.GetRandomPrompt();
                 Console.WriteLine(anEntry._promptText);
