@@ -1,6 +1,8 @@
 using System;
 using System.ComponentModel;
 
+//SHOWING CREATIVITY: In the entries, I added a Day Rate for the user to rate his/her day before answering the prompt.
+
 class Program
 {
     static void Main(string[] args)
