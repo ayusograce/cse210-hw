@@ -17,7 +17,6 @@ public class Scripture
             //Se añade cada elemento de "words" en _word, ya no como string sino como Word
             _words.Add(new Word(word));
         }
-
     }
 
     //METHODS
