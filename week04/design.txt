@@ -33,6 +33,7 @@ Attributes:
 *_customer : Customer
 Methods:
 *TotalOrder() : double  //It adds the price of each product
+*AddProduct() : void
 *PackagingLabel() : string  //Displays in the console
 *ShippingLabel() : string   //Displays in the console
 *TotalPrice() : double   //It adds the shipping fee 
