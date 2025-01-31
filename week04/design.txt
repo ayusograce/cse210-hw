@@ -1,0 +1,69 @@
+TEAM ACTIVITY W04
+
+YOUTUBE VIDEO PROGRAM
+
+Class: Video 
+Attributes:
+*_title : string
+*_author : string
+*_lenght : int
+*_comments : List<Comment>
+Methods:
+Video(title : string, author : string, length : int) //Constructor of the class
+*AddComment(comment comment) : void  //Adds a comment to the list of comments
+*NumberOfComments() : int  //Counts the the length of the list
+*DisplayAll() : void  //Displays the info to the console
+
+Class: Comment 
+Attributes:
+*_userName : string
+*_textComment : string
+Methods:
+Comment(username : string, comment : string)  //Constructor
+*DisplayComment(): void  //Displays de comment in the console
+
+
+
+
+ONLINE ORDERING PROGRAM
+
+Class: Order
+Attributes:
+*_products : List<Product>
+*_customer : Customer
+Methods:
+*TotalOrder() : double  //It adds the price of each product
+*PackagingLabel() : string  //Displays in the console
+*ShippingLabel() : string   //Displays in the console
+*TotalPrice() : double   //It adds the shipping fee 
+
+Class: Product
+Attributes:
+*_name : string
+*_productId : int
+*_price : double
+*_quantity : double
+Methods:
+Product(name : string, productId : int, price : double, quantity : int)   //Constructor
+*TotalProduct() : double  //Multiplies the quantity by the price of one product
+
+Class: Customer
+Attributes:
+*_fullName : string
+* _address : Address
+Methods:
+Customer(fullName : string, address : Address)  //Constructor
+*LiveInUSA() : boolean  //Uses a method in Address to check if the country is USA or not
+
+Class: Address
+Attributes:
+*_street : string
+*_city : string
+*_stateProvince : string
+*_country : string
+Methods:
+Address(street : string, city : string, state : string, country : string)  //Constructor
+*USAOrnot(country : string) : boolean  //Checks if the country is USA or not
+*GetAddress() : string  //Gets the full address
+
+
