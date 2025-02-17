@@ -51,7 +51,23 @@ public class GoalManager{
 
     public void DisplayPlayerInfo(){
     // Displays the players current score.
-        Console.WriteLine($"\nYou have {_score} points.\n");
+        Console.WriteLine($"\nYou have {_score} points.");
+        string level = "";
+        List<string> levels = new List<string>{"Beginner", "Novice", "Apprentice", "Adept", "Expert", "Master", "Grandmaster", "Legend", "Mythic", "Ulitmate"};
+        if(_score < 250)
+        {
+            Console.WriteLine($"Achieve 250 points to level up\n");
+        }
+        else 
+        {
+            int number = (_score / 250) -1;
+            if (number >=levels.Count)
+            {
+                number = levels.Count -1;
+            }
+            level = levels[number];
+            Console.WriteLine($"Congratulations! You are now a {level}\n");
+        }
     }
 
     public void ListGoalNames(){
@@ -66,6 +82,7 @@ public class GoalManager{
 
     public void ListGoalDetails(){
     //  Lists the details of each goal (including the checkbox of whether it is complete).
+        Console.Clear();
         Console.WriteLine("The goals are:");
         int indice = 0;
         foreach (Goal goal in _goals)
@@ -77,7 +94,8 @@ public class GoalManager{
 
     public void CreateGoal(){
     // Asks the user for the information about a new goal. Then, creates the goal and adds it to the list.
-        Console.WriteLine("The types of goals are:");
+        Console.Clear();
+        Console.WriteLine("\nThe types of goals are:");
         Console.WriteLine("1. Simple Goal");
         Console.WriteLine("2. Eternal Goal");
         Console.WriteLine("3. Checklist Goal");
@@ -116,8 +134,10 @@ public class GoalManager{
 
     public void RecordEvent(){
     // Asks the user which goal they have done and then records the event by calling the RecordEvent method on that goal.
-        Console.Write("Which goal did you accomplish? ");
+        Console.Clear();
+        Console.WriteLine("\nGoals:");
         ListGoalNames();
+        Console.Write("Which goal did you accomplish? ");
         int numGoal = int.Parse(Console.ReadLine()) - 1;
         if (numGoal >= 0 && numGoal < _goals.Count)
         {
